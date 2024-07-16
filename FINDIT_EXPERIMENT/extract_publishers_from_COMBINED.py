@@ -2,11 +2,11 @@ import csv
 import os
 
 # Define the path to your input CSV file
-input_csv_file_path = 'findit_noformat.csv'
+input_csv_file_path = 'COMBINED.csv'
 # Define the directory to save the text files
 output_dir = 'publishers'
 # Define the path to your output CSV file for unknown publishers
-unknown_csv_file_path = 'unknown_publishers.csv'
+unknown_csv_file_path = 'Unknown.csv'
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
@@ -27,7 +27,9 @@ publishers = {
     'American Chemical Society (ACS)': set(),
     'BioMed Central (BMC)': set(),
     'Public Library of Science (PLOS)': set(),
-    'Karger': set()
+    'Karger': set(),
+    'SciELO': set(),
+    'DOISerbia': set(),
 }
 
 # Open the CSV file for unknown publishers
