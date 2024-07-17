@@ -1,6 +1,8 @@
 import csv
 import requests
 
+OUTPUT_FILE = '/tmp/journals.csv'
+
 def download_file(url, local_path):
     response = requests.get(url)
     with open(local_path, 'wb') as file:
@@ -14,7 +16,7 @@ def parse_journal_info(file_path):
     journal_entries = content.strip().split('--------------------------------------------------------\n')
     
     # Prepare to write to a CSV file
-    output_file = '/tmp/journals.csv'
+    output_file = OUTPUT_FILE
     with open(output_file, 'w', newline='') as csvfile:
         fieldnames = ['JrId', 'JournalTitle', 'MedAbbr', 'ISSN (Print)', 'ISSN (Online)', 'IsoAbbr', 'NlmId']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -42,5 +44,5 @@ download_file(url, local_file_path)
 # Parse the downloaded file and create CSV
 parse_journal_info(local_file_path)
 
-print("Journal spreadsheet outputted to", output_file)
+print("Journal spreadsheet outputted to", OUTPUT_FILE)
 

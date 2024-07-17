@@ -1,13 +1,20 @@
 import argparse
 from metapub import PubMedFetcher
 from datetime import datetime
+import time
 
-def fetch_pmids_for_date_range(journal, start_year, end_year, fetcher, retmax=9999):
+def fetch_pmids_for_date_range(journal, start_year, end_year, fetcher, retmax=9999, timeout=30):
     query = f"{journal}[Journal] AND {start_year}:{end_year}[PDAT]"
     print(f"Running query: {query}")
-    pmids = fetcher.pmids_for_query(query, retmax=retmax)
-    print(f"Number of PMIDs found for {start_year}-{end_year}: {len(pmids)}")
-    return pmids
+    try:
+        start_time = time.time()
+        pmids = fetcher.pmids_for_query(query, retmax=retmax)
+        elapsed_time = time.time() - start_time
+        print(f"Number of PMIDs found for {start_year}-{end_year}: {len(pmids)} (Time taken: {elapsed_time:.2f} seconds)")
+        return pmids
+    except Exception as e:
+        print(f"Error during query: {e}")
+        return []
 
 def get_publication_years(journal):
     fetch = PubMedFetcher()
@@ -28,6 +35,10 @@ def get_publication_years(journal):
 
     # Query to get the most recent PMIDs to determine the most recent publication year
     recent_pmids = fetch_pmids_for_date_range(journal, current_year - 5, current_year, fetch, retmax=500)
+    
+    if not recent_pmids:
+        # If no recent PMIDs are found, use the most recent PMID from the oldest PMIDs
+        recent_pmids = oldest_pmids
 
     # Sort PMIDs to get the oldest and most recent
     oldest_pmids = sorted(oldest_pmids)

@@ -1,8 +1,16 @@
 import streamlit as st
 import os
 import sqlite3
+from publication_years import get_publication_years
 from metapub import PubMedFetcher, FindIt
-from datetime import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import requests
 
 # Set the directory where publisher files are stored
 publisher_dir = "FINDIT_EXPERIMENT/publishers"
@@ -42,73 +50,140 @@ def save_result(pmid, journal, year, url, reason):
     conn.commit()
     conn.close()
 
-# Function to get the oldest and most recent publication years for a journal
-def get_publication_years(journal):
-    fetch = PubMedFetcher()
-    query = f"{journal}[Journal]"
-    pmids = fetch.pmids_for_query(query, retmax=1, mindate="1900", maxdate=str(datetime.now().year))
-    if not pmids:
-        return 1960, datetime.now().year
+# Fetch results for the current journal and year from the database
+def fetch_results(journal, year):
+    conn = sqlite3.connect(db_path)
+    c = conn.cursor()
+    c.execute("SELECT pmid, url, reason FROM results WHERE journal=? AND year=?", (journal, year))
+    rows = c.fetchall()
+    conn.close()
+    return rows
+
+# Check if a URL is downloadable using Selenium
+def check_downloadable(url):
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+    try:
+        driver.get(url)
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        response_code = 200  # Assume success if page loads
+    except Exception as e:
+        response_code = 400  # Use a different code if an error occurs
+    finally:
+        driver.quit()
     
-    oldest_pmid = pmids[-1]
-    recent_pmid = pmids[0]
-    
-    oldest_article = fetch.article_by_pmid(oldest_pmid)
-    recent_article = fetch.article_by_pmid(recent_pmid)
-    
-    oldest_year = oldest_article.year
-    recent_year = recent_article.year
-    
-    return max(oldest_year, 1960), recent_year
+    return response_code
 
 # Initialize the database at the start
 init_db()
 
-# Get the list of publishers dynamically
+# Step 1: Select Publisher and Journal
+st.sidebar.header("Step 1: Select Publisher and Journal")
 publishers_display = get_publishers()
-
-# Sidebar for publisher selection
-st.sidebar.header("Select Publisher")
 selected_publisher = st.sidebar.selectbox("Publisher", publishers_display)
 
-# Get the list of journals for the selected publisher
-journals = get_journal_list(selected_publisher)
-selected_journal = st.sidebar.selectbox("Journal", journals)
+if selected_publisher:
+    journals = get_journal_list(selected_publisher)
+    selected_journal = st.sidebar.selectbox("Journal", journals)
 
-# Sidebar for year selection
-st.sidebar.header("Select Year")
+    if selected_journal:
+        st.sidebar.write(f"Selected Journal: {selected_journal}")
 
-# Get the publication years for the selected journal
-oldest_year, recent_year = get_publication_years(selected_journal)
+        # Step 2: Calculate and Display Publication Year Range
+        if st.sidebar.button("Calculate Publication Years"):
+            with st.spinner("Calculating publication years..."):
+                try:
+                    oldest_year, recent_year = get_publication_years(selected_journal)
+                    st.session_state["oldest_year"] = oldest_year
+                    st.session_state["recent_year"] = recent_year
+                except Exception as e:
+                    st.sidebar.error(f"Error: {e}")
 
-selected_year = st.sidebar.slider("Year", min_value=oldest_year, max_value=recent_year, value=recent_year)
+        if "oldest_year" in st.session_state and "recent_year" in st.session_state:
+            oldest_year = st.session_state["oldest_year"]
+            recent_year = st.session_state["recent_year"]
+            st.write(f"Publication range for {selected_journal}: {oldest_year} - {recent_year}")
 
-# Button to start the test
-if st.sidebar.button("Run Test"):
-    try:
-        query = f"{selected_journal}[Journal] AND {selected_year}[PDAT]"
-        pmids = fetch.pmids_for_query(query)
-        st.write(f"Found {len(pmids)} articles for {selected_journal} in {selected_year}.")
-        
-        # Process each PMID
-        for pmid in pmids:
-            src = FindIt(pmid, verify=False)
-            if src.url:
-                save_result(pmid, selected_journal, selected_year, src.url, None)
-                st.write(f"PMID {pmid}: Found URL {src.url}")
-            else:
-                save_result(pmid, selected_journal, selected_year, None, "No URL found")
-                st.write(f"PMID {pmid}: No URL found")
-    except Exception as e:
-        st.write(f"Error: {e}")
+            # Step 3: Select Year and Run the Test
+            selected_year = st.slider("Select Year", min_value=oldest_year, max_value=recent_year, value=recent_year)
+            
+            if st.button("Run Test"):
+                fetch = PubMedFetcher()
+                try:
+                    query = f"{selected_journal}[Journal] AND {selected_year}[PDAT]"
+                    pmids = fetch.pmids_for_query(query)
+                    st.write(f"Found {len(pmids)} articles for {selected_journal} in {selected_year}.")
+                    
+                    # Initialize progress bar
+                    progress_bar = st.progress(0)
+                    progress_text = st.empty()
+                    result_display = st.empty()
+                    
+                    free_count = 0
+                    publisher_count = 0
+                    downloadable_count = 0
+                    non_downloadable_count = 0
 
-# Display results
-st.header("Results")
-conn = sqlite3.connect(db_path)
-c = conn.cursor()
-c.execute("SELECT * FROM results")
-rows = c.fetchall()
-for row in rows:
-    st.write(row)
-conn.close()
+                    # Process each PMID
+                    for i, pmid in enumerate(pmids):
+                        src = FindIt(pmid, verify=False)
+                        if src.url:
+                            if "europepmc" in src.url:
+                                result_display.write(f"PMID {pmid}: [URL]({src.url}) [Free] [200]")
+                                free_count += 1
+                                downloadable_count += 1
+                            else:
+                                result_display.write(f"PMID {pmid}: [URL]({src.url}) [Publisher]")
+                                publisher_count += 1
+                                response_code = check_downloadable(src.url)
+                                if response_code == 200:
+                                    result_display.write(f"PMID {pmid}: [URL]({src.url}) [Publisher] [200]", color="green")
+                                    downloadable_count += 1
+                                else:
+                                    result_display.write(f"PMID {pmid}: [URL]({src.url}) [Publisher] [{response_code}]", color="red")
+                                    non_downloadable_count += 1
+                                save_result(pmid, selected_journal, selected_year, src.url, None)
+                        else:
+                            reason = src.reason
+                            if not src.doi:
+                                reason = "No DOI found."
+                            save_result(pmid, selected_journal, selected_year, None, reason)
+                            result_display.write(f"PMID {pmid}: No URL ({reason}).")
+                        
+                        # Update progress bar
+                        progress_bar.progress((i + 1) / len(pmids))
+                        progress_text.text(f"Processing {i + 1}/{len(pmids)} articles")
+
+                    # Display statistics
+                    st.write(f"Total articles processed: {len(pmids)}")
+                    st.write(f"Free articles: {free_count}")
+                    st.write(f"Publisher articles: {publisher_count}")
+                    st.write(f"Downloadable articles: {downloadable_count}")
+                    st.write(f"Non-downloadable articles: {non_downloadable_count}")
+
+                except Exception as e:
+                    st.write(f"Error: {e}")
+
+                # Step 4: Display Results for the Current Journal and Year
+                results = fetch_results(selected_journal, selected_year)
+                if results:
+                    st.header(f"Results for {selected_journal} in {selected_year}")
+                    for row in results:
+                        pmid, url, reason = row
+                        if url:
+                            if "europepmc" in url:
+                                st.write(f"PMID {pmid}: [URL]({url}) [Free] [200]", color="green")
+                            else:
+                                st.write(f"PMID {pmid}: [URL]({url}) [Publisher]")
+                        else:
+                            st.write(f"PMID {pmid}: No URL found, reason: {reason}")
+
+# Optionally clear the session state if needed
+if st.button("Clear Session State"):
+    st.session_state.clear()
 
