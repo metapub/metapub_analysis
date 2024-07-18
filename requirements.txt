@@ -1,0 +1,5 @@
+streamlit
+selenium
+beautifulsoup
+bs4
+webdriver_manager

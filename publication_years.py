@@ -3,6 +3,8 @@ from metapub import PubMedFetcher
 from datetime import datetime
 import time
 
+MIN_YEAR = 1900
+
 def fetch_pmids_for_date_range(journal, start_year, end_year, fetcher, retmax=9999, timeout=30):
     query = f"{journal}[Journal] AND {start_year}:{end_year}[PDAT]"
     print(f"Running query: {query}")
@@ -22,7 +24,7 @@ def get_publication_years(journal):
 
     # Start querying by decade to find the oldest publication year
     oldest_pmids = []
-    for year in range(1900, current_year + 1, 10):
+    for year in range(MIN_YEAR, current_year + 1, 10):
         end_year = min(year + 9, current_year)
         decade_pmids = fetch_pmids_for_date_range(journal, year, end_year, fetch)
         if decade_pmids:
@@ -31,7 +33,7 @@ def get_publication_years(journal):
 
     if not oldest_pmids:
         print("No PMIDs found.")
-        return 1960, current_year
+        return MIN_YEAR, current_year
 
     # Query to get the most recent PMIDs to determine the most recent publication year
     recent_pmids = fetch_pmids_for_date_range(journal, current_year - 5, current_year, fetch, retmax=500)
@@ -59,7 +61,7 @@ def get_publication_years(journal):
     print(f"Oldest Year: {oldest_year}")
     print(f"Most Recent Year: {recent_year}")
 
-    return max(oldest_year, 1960), recent_year
+    return max(oldest_year, MIN_YEAR), recent_year
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate publication year range for a journal")
