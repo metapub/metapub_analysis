@@ -45,30 +45,32 @@ if selected_publisher:
                     # Check cache for publication years
                     cached_years = fetch_publication_years(selected_journal)
                     if cached_years:
-                        oldest_year, recent_year = cached_years
-                        st.session_state["oldest_year"] = int(oldest_year)
-                        st.session_state["recent_year"] = int(recent_year)
+                        oldest_year, recent_year, valid_years = cached_years
+                        st.session_state["oldest_year"] = oldest_year
+                        st.session_state["recent_year"] = recent_year
+                        st.session_state["valid_years"] = valid_years
                     else:
-                        oldest_year, recent_year = get_publication_years(selected_journal)
-                        st.session_state["oldest_year"] = int(oldest_year)
-                        st.session_state["recent_year"] = int(recent_year)
+                        oldest_year, recent_year, valid_years = get_publication_years(selected_journal)
+                        st.session_state["oldest_year"] = oldest_year
+                        st.session_state["recent_year"] = recent_year
+                        st.session_state["valid_years"] = valid_years
                         # Save publication years to cache
-                        save_publication_years(selected_journal, oldest_year, recent_year)
+                        save_publication_years(selected_journal, oldest_year, recent_year, valid_years)
                 except Exception as e:
                     st.sidebar.error(f"Error: {e}")
 
-        if "oldest_year" in st.session_state and "recent_year" in st.session_state:
+        if "oldest_year" in st.session_state and "recent_year" in st.session_state and "valid_years" in st.session_state:
             oldest_year = st.session_state["oldest_year"]
             recent_year = st.session_state["recent_year"]
+            valid_years = st.session_state["valid_years"]
 
-            if oldest_year is None or recent_year is None:
+            if oldest_year is None or recent_year is None or oldest_year > recent_year:
                 st.write("Could not determine the publication range for this journal.")
             else:
                 st.write(f"Publication range for {selected_journal}: {oldest_year} - {recent_year}")
 
                 # Step 3: Select Year and Run the Test
-                years = list(range(oldest_year, recent_year + 1))
-                selected_year = st.selectbox("Select Year", years)
+                selected_year = st.selectbox("Select Year", valid_years)
 
                 if st.button("Run Test"):
                     fetch = PubMedFetcher()

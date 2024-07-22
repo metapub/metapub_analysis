@@ -17,6 +17,7 @@ def get_publication_years(journal):
 
     oldest_year = None
     recent_year = None
+    valid_years = []
 
     if len(pmids) == 9999:
         # Perform decade-wise search to find the oldest year
@@ -25,17 +26,25 @@ def get_publication_years(journal):
             decade_pmids = fetch.pmids_for_query(query, retmax=9999)
             if decade_pmids:
                 oldest_pmid = min(decade_pmids)
-                oldest_year = fetch.article_by_pmid(oldest_pmid).year
+                oldest_year = int(fetch.article_by_pmid(oldest_pmid).year)
                 break
     else:
         oldest_pmid = min(pmids)
-        oldest_year = fetch.article_by_pmid(oldest_pmid).year
+        oldest_year = int(fetch.article_by_pmid(oldest_pmid).year)
 
     # Find the most recent year
     recent_pmid = max(pmids)
-    recent_year = fetch.article_by_pmid(recent_pmid).year
+    recent_year = int(fetch.article_by_pmid(recent_pmid).year)
 
-    return oldest_year, recent_year
+    # Validate each year in the range
+    if oldest_year and recent_year and oldest_year <= recent_year:
+        for year in range(oldest_year, recent_year + 1):
+            query = f"{journal}[Journal] AND {year}[PDAT]"
+            year_pmids = fetch.pmids_for_query(query, retmax=5)  # Fetch a small number to validate the year
+            if year_pmids:
+                valid_years.append(year)
+
+    return oldest_year, recent_year, valid_years
 
 def check_downloadable(url):
     options = Options()
