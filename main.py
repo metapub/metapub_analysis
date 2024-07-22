@@ -135,10 +135,20 @@ if selected_publisher:
                                         save_result(pmid, selected_journal, selected_year, src.url, None, response_code)
                                 else:
                                     reason = src.reason
-                                    if not src.doi:
-                                        reason = "No DOI found."
-                                    save_result(pmid, selected_journal, selected_year, None, reason, None)
-                                    result_display.write(f"PMID {pmid}: No URL ({reason}).")
+                                    if "DENIED" in reason and src.doi:
+                                        doi_url = f"https://dx.doi.org/{src.doi}"
+                                        response_code = check_downloadable(doi_url)
+                                        if response_code == 200:
+                                            result_display.markdown(f"PMID {pmid}: [URL]({doi_url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+                                            save_result(pmid, selected_journal, selected_year, doi_url, None, 200)
+                                        else:
+                                            result_display.markdown(f"PMID {pmid}: [URL]({doi_url}) [Publisher] <span style='color: red;'>[{response_code}]</span>", unsafe_allow_html=True)
+                                            save_result(pmid, selected_journal, selected_year, doi_url, reason, response_code)
+                                    else:
+                                        if not src.doi:
+                                            reason = "No DOI found."
+                                        save_result(pmid, selected_journal, selected_year, None, reason, 402)
+                                        result_display.write(f"PMID {pmid}: No URL ({reason}).")
                             
                             # Update progress bar
                             progress_bar.progress((i + 1) / len(pmids))
