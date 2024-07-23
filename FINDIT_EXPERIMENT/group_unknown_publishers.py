@@ -22,21 +22,16 @@ with open(input_csv_file_path, newline='', encoding='utf-8') as csvfile:
         base_url = extract_base_url(row['doi_url'])
         url_groups[base_url].append(row)
 
-# Write the grouped data to the output CSV file
-fieldnames = ['PMID', 'Journal', 'doi', 'doi_url', 'publisher_guess', 'year']
-with open(output_csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    writer.writeheader()
+# Write the grouped data to separate CSV files
+fieldnames = ['PMID', 'Journal', 'publisher_guess', 'year', 'doi', 'doi_url']
 
-    # Write grouped lines first
-    for base_url, rows in url_groups.items():
-        if base_url != 'no_pattern':
-            for row in rows:
-                writer.writerow(row)
+for base_url, rows in url_groups.items():
+    with open(base_url+".csv", 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
 
-    # Write lines with no pattern at the end
-    for row in url_groups['no_pattern']:
-        writer.writerow(row)
+        for row in rows:
+            writer.writerow(row)
 
-print(f"Grouped CSV file created at {output_csv_file_path}.")
+    print(f"Grouped CSV file created at {base_url}.csv.")
 

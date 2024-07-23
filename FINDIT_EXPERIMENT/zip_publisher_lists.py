@@ -17,9 +17,10 @@ def read_journals_from_python(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
         # Find all lists with more than 4 entries
-        lists = re.findall(r'\[([^\]]+)\]', content)
+        lists = re.findall(r'\[(.*?)\]', content, re.DOTALL)
         for lst in lists:
-            items = [item.strip().strip("'\"") for item in lst.split(',') if item.strip()]
+            items = re.split(r',\s*', lst.strip())
+            items = [item.strip().strip("'\"") for item in items if item.strip()]
             if len(items) > 4:
                 journals.update(items)
     return journals
@@ -35,6 +36,7 @@ def main(file1, file2):
     else:
         journals2 = read_journals_from_text(file2)
 
+    # Create sets and perform union
     all_journals = journals1.union(journals2)
     sorted_journals = sorted(all_journals)
 

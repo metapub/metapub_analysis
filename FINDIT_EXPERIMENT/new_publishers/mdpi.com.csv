@@ -1,0 +1,316 @@
+PMID,Journal,publisher_guess,year,doi,doi_url
+38786952,Membranes,Unknown,2024,10.3390/membranes14050101,https://www.mdpi.com/2077-0375/14/5/101
+38392679,Membranes,Unknown,2024,10.3390/membranes14020052,https://www.mdpi.com/2077-0375/14/2/52
+38804339,MPS,Unknown,2024,10.3390/mps7030045,https://www.mdpi.com/2409-9279/7/3/45
+37888030,MPS,Unknown,2023,10.3390/mps6050098,https://www.mdpi.com/2409-9279/6/5/98
+36157594,Environments,Unknown,2022,10.3390/environments9070077,https://www.mdpi.com/2076-3298/9/7/77
+32982030,Environments,Unknown,2018,10.3390/environments5080091,https://www.mdpi.com/2076-3298/5/8/91
+38698914,DNA,Unknown,2023,10.3390/dna3020005,https://www.mdpi.com/2673-8856/3/2/5
+36911626,DNA,Unknown,2022,10.3390/dna2040016,https://www.mdpi.com/2673-8856/2/4/16
+38792621,Life,Unknown,2024,10.3390/life14050600,https://www.mdpi.com/2075-1729/14/5/600
+38790725,Antioxidants (Basel),Unknown,2024,10.3390/antiox13050620,https://www.mdpi.com/2076-3921/13/5/620
+38790700,Antioxidants (Basel),Unknown,2024,10.3390/antiox13050595,https://www.mdpi.com/2076-3921/13/5/595
+38891016,Foods,Unknown,2024,10.3390/foods13111686,https://www.mdpi.com/2304-8158/13/11/1686
+38890978,Foods,Unknown,2024,10.3390/foods13111750,https://www.mdpi.com/2304-8158/13/11/1750
+38786550,Medicines (Basel),Unknown,2024,10.3390/medicines11050011,https://www.mdpi.com/2305-6320/11/5/11
+37505064,Medicines (Basel),Unknown,2023,10.3390/medicines10070043,https://www.mdpi.com/2305-6320/10/7/43
+38787022,Tomography,Unknown,2024,10.3390/tomography10050062,https://www.mdpi.com/2379-139X/10/5/62
+38276249,Tomography,Unknown,2023,10.3390/tomography10010001,https://www.mdpi.com/2379-139X/10/1/1
+36081889,Agronomy (Basel),Unknown,2022,10.3390/agronomy12081884,https://www.mdpi.com/2073-4395/12/8/1884
+33304637,Agronomy (Basel),Unknown,2017,10.3390/agronomy7010008,https://www.mdpi.com/2073-4395/7/1/8
+38786721,J Fungi (Basel),Unknown,2024,10.3390/jof10050366,https://www.mdpi.com/2309-608X/10/5/366
+38786702,J Fungi (Basel),Unknown,2024,10.3390/jof10050347,https://www.mdpi.com/2309-608X/10/5/347
+26714261,Chromatography (Basel),Unknown,2015,10.3390/chromatography2030502,https://www.mdpi.com/2227-9075/2/3/502
+38808313,J Mark Access Health Policy,Unknown,2024,10.3390/jmahp12020009,https://www.mdpi.com/2001-6689/12/2/9
+36998432,J Mark Access Health Policy,Unknown,2023,10.1080/20016689.2023.2194507,https://www.mdpi.com/2001-6689/11/1/2194507
+38287972,Crystals (Basel),Unknown,2024,10.3390/cryst14010011,https://www.mdpi.com/2073-4352/14/1/11
+37206882,Crystals (Basel),Unknown,2022,10.3390/cryst12111663,https://www.mdpi.com/2073-4352/12/11/1663
+36873830,Informatics (MDPI),Unknown,2022,10.3390/informatics9040079,https://www.mdpi.com/2227-9709/9/4/79
+26985401,Informatics (MDPI),Unknown,2014,10.3390/informatics1010072,https://www.mdpi.com/2227-9709/1/1/72
+38790387,Bioengineering (Basel),Unknown,2024,10.3390/bioengineering11050495,https://www.mdpi.com/2306-5354/11/5/495
+38790324,Bioengineering (Basel),Unknown,2024,10.3390/bioengineering11050457,https://www.mdpi.com/2306-5354/11/5/457
+26966555,Fibers (Basel),Unknown,2016,10.3390/fib4010001,https://www.mdpi.com/2079-6439/4/1/1
+38463943,Chemosensors (Basel),Unknown,2023,10.3390/chemosensors11060327,https://www.mdpi.com/2227-9040/11/6/327
+35855953,Chemosensors (Basel),Unknown,2021,10.3390/chemosensors9080201,https://www.mdpi.com/2227-9040/9/8/201
+38804473,Pharmacy (Basel),Unknown,2024,10.3390/pharmacy12030081,https://www.mdpi.com/2226-4787/12/3/81
+38392932,Pharmacy (Basel),Unknown,2024,10.3390/pharmacy12010025,https://www.mdpi.com/2226-4787/12/1/25
+38787198,Vet Sci,Unknown,2024,10.3390/vetsci11050226,https://www.mdpi.com/2306-7381/11/5/226
+38668415,Vet Sci,Unknown,2024,10.3390/vetsci11040147,https://www.mdpi.com/2306-7381/11/4/147
+38645934,Religions (Basel),Unknown,2024,10.3390/rel15030341,https://www.mdpi.com/2077-1444/15/3/341
+38009108,Religions (Basel),Unknown,2023,10.3390/rel14030325,https://www.mdpi.com/2077-1444/14/3/325
+38846757,ISPRS Int J Geoinf,Unknown,2023,10.3390/ijgi12080328,https://www.mdpi.com/2220-9964/12/8/328
+24977037,Adm Sci,Unknown,2012,10.3390/admsci2020162,https://www.mdpi.com/2076-3387/2/2/162
+38362160,Remote Sens (Basel),Unknown,2023,10.3390/rs15194715,https://www.mdpi.com/2072-4292/15/19/4715
+32704487,Remote Sens (Basel),Unknown,2018,10.3390/rs10060930,https://www.mdpi.com/2072-4292/10/6/930
+38792862,Microorganisms,Unknown,2024,10.3390/microorganisms12050958,https://www.mdpi.com/2076-2607/12/5/958
+38792813,Microorganisms,Unknown,2024,10.3390/microorganisms12050984,https://www.mdpi.com/2076-2607/12/5/984
+38804384,Med Sci (Basel),Unknown,2024,10.3390/medsci12020028,https://www.mdpi.com/2076-3271/12/2/28
+37367735,Med Sci (Basel),Unknown,2023,10.3390/medsci11020036,https://www.mdpi.com/2076-3271/11/2/36
+37974898,Electronics (Basel),Unknown,2023,10.3390/electronics12173694,https://www.mdpi.com/2079-9292/12/17/3694
+36567678,Electronics (Basel),Unknown,2022,10.3390/electronics11132040,https://www.mdpi.com/2079-9292/11/13/2040
+38793811,Vaccines (Basel),Unknown,2024,10.3390/vaccines12050560,https://www.mdpi.com/2076-393X/12/5/560
+38793783,Vaccines (Basel),Unknown,2024,10.3390/vaccines12050532,https://www.mdpi.com/2076-393X/12/5/532
+36714171,Societies (Basel),Unknown,2022,10.3390/soc12060170,https://www.mdpi.com/2075-4698/12/6/170
+29277844,Societies (Basel),Unknown,2017,10.3390/soc7020006,https://www.mdpi.com/2075-4698/7/2/6
+38818302,Appl Sci (Basel),Unknown,2024,10.3390/app14093819,https://www.mdpi.com/2076-3417/14/9/3819
+36210866,Appl Sci (Basel),Unknown,2021,10.3390/app11167256,https://www.mdpi.com/2076-3417/11/16/7256
+37324780,Land (Basel),Unknown,2023,10.3390/land12030612,https://www.mdpi.com/2073-445X/12/3/612
+35685116,Land (Basel),Unknown,2020,10.3390/land9080246,https://www.mdpi.com/2073-445X/9/8/246
+38891758,Animals (Basel),Unknown,2024,10.3390/ani14111711,https://www.mdpi.com/2076-2615/14/11/1711
+38891737,Animals (Basel),Unknown,2024,10.3390/ani14111688,https://www.mdpi.com/2076-2615/14/11/1688
+38786653,J Intell,Unknown,2024,10.3390/jintelligence12050051,https://www.mdpi.com/2079-3200/12/5/51
+38535160,J Intell,Unknown,2024,10.3390/jintelligence12030026,https://www.mdpi.com/2079-3200/12/3/26
+38793695,Viruses,Unknown,2024,10.3390/v16050742,https://www.mdpi.com/1999-4915/16/5/742
+38793653,Viruses,Unknown,2024,10.3390/v16050772,https://www.mdpi.com/1999-4915/16/5/772
+38785681,Entropy (Basel),Unknown,2024,10.3390/e26050432,https://www.mdpi.com/1099-4300/26/5/432
+38785638,Entropy (Basel),Unknown,2024,10.3390/e26050390,https://www.mdpi.com/1099-4300/26/5/390
+38785915,Behav Sci,Unknown,2024,10.3390/bs14050424,https://www.mdpi.com/2076-328X/14/5/424
+38785869,Behav Sci,Unknown,2024,10.3390/bs14050378,https://www.mdpi.com/2076-328X/14/5/378
+38785734,Biosensors,Unknown,2024,10.3390/bios14050260,https://www.mdpi.com/2079-6374/14/5/260
+38785691,Biosensors,Unknown,2024,10.3390/bios14050218,https://www.mdpi.com/2079-6374/14/5/218
+38892474,Int J Mol Sci,Unknown,2024,10.3390/ijms25116286,https://www.mdpi.com/1422-0067/25/11/6286
+38892405,Int J Mol Sci,Unknown,2024,10.3390/ijms25116217,https://www.mdpi.com/1422-0067/25/11/6217
+38790606,Children,Unknown,2024,10.3390/children11050611,https://www.mdpi.com/2227-9067/11/5/611
+38790544,Children,Unknown,2024,10.3390/children11050549,https://www.mdpi.com/2227-9067/11/5/549
+27672073,Pneumonol Alergol Pol,Unknown,2016,10.5603/PiAP.2016.0038,https://www.mdpi.com/2543-6031/84/5/302
+27238165,Pneumonol Alergol Pol,Unknown,2016,10.5603/PiAP.2016.0005,https://www.mdpi.com/2543-6031/84/2/81
+38515606,Venereology,Unknown,2023,10.3390/venereology2040016,https://www.mdpi.com/2674-0710/2/4/16
+35602314,Soc Sci,Unknown,2022,10.3390/socsci11010008,https://www.mdpi.com/2076-0760/11/1/8
+38586279,Actuators,Unknown,2024,10.3390/act13030104,https://www.mdpi.com/2076-0825/13/3/104
+38785763,Diseases,Unknown,2024,10.3390/diseases12050108,https://www.mdpi.com/2079-9721/12/5/108
+38785750,Diseases,Unknown,2024,10.3390/diseases12050095,https://www.mdpi.com/2079-9721/12/5/95
+38786199,Antibiotics (Basel),Unknown,2024,10.3390/antibiotics13050412,https://www.mdpi.com/2079-6382/13/5/412
+38786186,Antibiotics (Basel),Unknown,2024,10.3390/antibiotics13050458,https://www.mdpi.com/2079-6382/13/5/458
+38787154,Toxics,Unknown,2024,10.3390/toxics12050375,https://www.mdpi.com/2305-6304/12/5/375
+38787150,Toxics,Unknown,2024,10.3390/toxics12050371,https://www.mdpi.com/2305-6304/12/5/371
+38164344,Soc Sci (Basel),Unknown,2024,10.3390/socsci13010004,https://www.mdpi.com/2076-0760/13/1/4
+29616148,Soc Sci (Basel),Unknown,2017,10.3390/socsci6020047,https://www.mdpi.com/2076-0760/6/2/47
+38793237,Micromachines (Basel),Unknown,2024,10.3390/mi15050664,https://www.mdpi.com/2072-666X/15/5/664
+38793140,Micromachines (Basel),Unknown,2024,10.3390/mi15050567,https://www.mdpi.com/2072-666X/15/5/567
+38804463,Audiol Res,Unknown,2024,10.3390/audiolres14030039,https://www.mdpi.com/2039-4349/14/3/39
+37366687,Audiol Res,Unknown,2023,10.3390/audiolres13030041,https://www.mdpi.com/2039-4349/13/3/41
+38790576,Children (Basel),Unknown,2024,10.3390/children11050582,https://www.mdpi.com/2227-9067/11/5/582
+38786978,J Cardiovasc Dev Dis,Unknown,2024,10.3390/jcdd11050156,https://www.mdpi.com/2308-3425/11/5/156
+38667732,J Cardiovasc Dev Dis,Unknown,2024,10.3390/jcdd11040115,https://www.mdpi.com/2308-3425/11/4/115
+38804364,Noncoding RNA,Unknown,2024,10.3390/ncrna10030032,https://www.mdpi.com/2311-553X/10/3/32
+36827548,Noncoding RNA,Unknown,2023,10.3390/ncrna9010015,https://www.mdpi.com/2311-553X/9/1/15
+30380756,Sci Pharm,Unknown,2018,10.3390/scipharm86040048,https://www.mdpi.com/2218-0532/86/4/48
+28753970,Sci Pharm,Unknown,2017,10.3390/scipharm85030026,https://www.mdpi.com/2218-0532/85/3/26
+34056640,Proc West Mark Ed Assoc Conf,Unknown,2019,10.3390/ecsoc-23-06610,https://www.mdpi.com/2504-3900/41/1/53
+38274708,Molbank,Unknown,2023,10.3390/m1650,https://www.mdpi.com/1422-8599/2023/2/M1650
+37920849,Molbank,Unknown,2023,10.3390/m1713,https://www.mdpi.com/1422-8599/2023/3/M1713
+38893284,Cancers (Basel),Unknown,2024,10.3390/cancers16112151,https://www.mdpi.com/2072-6694/16/11/2151
+38893203,Cancers (Basel),Unknown,2024,10.3390/cancers16112085,https://www.mdpi.com/2072-6694/16/11/2085
+38787083,Toxins (Basel),Unknown,2024,10.3390/toxins16050231,https://www.mdpi.com/2072-6651/16/5/231
+38535825,Toxins (Basel),Unknown,2024,10.3390/toxins16030159,https://www.mdpi.com/2072-6651/16/3/159
+38794232,Pharmaceuticals (Basel),Unknown,2024,10.3390/ph17050556,https://www.mdpi.com/1424-8247/17/5/556
+38794225,Pharmaceuticals (Basel),Unknown,2024,10.3390/ph17050655,https://www.mdpi.com/1424-8247/17/5/655
+28555058,Microarrays (Basel),Unknown,2017,10.3390/microarrays6020009,https://www.mdpi.com/2076-3905/6/2/9
+27600231,Microarrays (Basel),Unknown,2015,10.3390/microarrays4030407,https://www.mdpi.com/2076-3905/4/3/407
+38605973,Cardiogenetics,Unknown,2023,10.3390/cardiogenetics13010005,https://www.mdpi.com/2035-8148/13/1/5
+34912529,Cardiogenetics,Unknown,2021,10.3390/cardiogenetics11030017,https://www.mdpi.com/2035-8148/11/3/17
+38667160,Biosensors (Basel),Unknown,2024,10.3390/bios14040167,https://www.mdpi.com/2079-6374/14/4/167
+38869614,Nanomaterials (Basel),Unknown,2024,10.3390/nano14110989,https://www.mdpi.com/2079-4991/14/11/989
+38786852,Nanomaterials (Basel),Unknown,2024,10.3390/nano14100896,https://www.mdpi.com/2079-4991/14/10/896
+32983579,Geosciences (Basel),Unknown,2020,10.3390/geosciences10010025,https://www.mdpi.com/2076-3263/10/1/25
+33408883,Geosciences (Basel),Unknown,2019,10.3390/geosciences10010005,https://www.mdpi.com/2076-3263/10/1/5
+38804435,J Dev Biol,Unknown,2024,10.3390/jdb12020015,https://www.mdpi.com/2221-3759/12/2/15
+37489333,J Dev Biol,Unknown,2023,10.3390/jdb11030032,https://www.mdpi.com/2221-3759/11/3/32
+38804277,Proteomes,Unknown,2024,10.3390/proteomes12020015,https://www.mdpi.com/2227-7382/12/2/15
+36136310,Proteomes,Unknown,2022,10.3390/proteomes10030032,https://www.mdpi.com/2227-7382/10/3/32
+38804445,Infect Dis Rep,Unknown,2024,10.3390/idr16030035,https://www.mdpi.com/2036-7449/16/3/35
+37736995,Infect Dis Rep,Unknown,2023,10.3390/idr15050048,https://www.mdpi.com/2036-7449/15/5/48
+38794352,Pharmaceutics,Unknown,2024,10.3390/pharmaceutics16050690,https://www.mdpi.com/1999-4923/16/5/690
+38794292,Pharmaceutics,Unknown,2024,10.3390/pharmaceutics16050629,https://www.mdpi.com/1999-4923/16/5/629
+37752971,Microbiol Res (Pavia),Unknown,2023,10.3390/microbiolres14020047,https://www.mdpi.com/2036-7481/14/2/47
+38891560,Polymers (Basel),Unknown,2024,10.3390/polym16111512,https://www.mdpi.com/2073-4360/16/11/1512
+38891498,Polymers (Basel),Unknown,2024,10.3390/polym16111552,https://www.mdpi.com/2073-4360/16/11/1552
+38804377,Pediatr Rep,Unknown,2024,10.3390/pediatric16020034,https://www.mdpi.com/2036-7503/16/2/34
+38391002,Pediatr Rep,Unknown,2024,10.3390/pediatric16010014,https://www.mdpi.com/2036-7503/16/1/14
+38804484,Neurol Int,Unknown,2024,10.3390/neurolint16030038,https://www.mdpi.com/2035-8377/16/3/38
+37606393,Neurol Int,Unknown,2023,10.3390/neurolint15030060,https://www.mdpi.com/2035-8377/15/3/60
+38804311,Antibodies (Basel),Unknown,2024,10.3390/antib13020043,https://www.mdpi.com/2073-4468/13/2/43
+37092448,Antibodies (Basel),Unknown,2023,10.3390/antib12020027,https://www.mdpi.com/2073-4468/12/2/27
+38785841,Biology (Basel),Unknown,2024,10.3390/biology13050286,https://www.mdpi.com/2079-7737/13/5/286
+38785797,Biology (Basel),Unknown,2024,10.3390/biology13050316,https://www.mdpi.com/2079-7737/13/5/316
+38804431,Nurs Rep,Unknown,2024,10.3390/nursrep14020098,https://www.mdpi.com/2039-4403/14/2/98
+38525696,Nurs Rep,Unknown,2024,10.3390/nursrep14020050,https://www.mdpi.com/2039-4403/14/2/50
+38891390,Plants (Basel),Unknown,2024,10.3390/plants13111502,https://www.mdpi.com/2223-7747/13/11/1502
+38891298,Plants (Basel),Unknown,2024,10.3390/plants13111489,https://www.mdpi.com/2223-7747/13/11/1489
+38786012,Biomolecules,Unknown,2024,10.3390/biom14050605,https://www.mdpi.com/2218-273X/14/5/605
+38786004,Biomolecules,Unknown,2024,10.3390/biom14050597,https://www.mdpi.com/2218-273X/14/5/597
+38787282,Pathogens,Unknown,2024,10.3390/pathogens13050430,https://www.mdpi.com/2076-0817/13/5/430
+38787201,Pathogens,Unknown,2024,10.3390/pathogens13050349,https://www.mdpi.com/2076-0817/13/5/349
+38792671,Life (Basel),Unknown,2024,10.3390/life14050620,https://www.mdpi.com/2075-1729/14/5/620
+38792660,Life (Basel),Unknown,2024,10.3390/life14050640,https://www.mdpi.com/2075-1729/14/5/640
+38790497,Brain Sci,Unknown,2024,10.3390/brainsci14050475,https://www.mdpi.com/2076-3425/14/5/475
+38790459,Brain Sci,Unknown,2024,10.3390/brainsci14050481,https://www.mdpi.com/2076-3425/14/5/481
+25635227,Metals (Basel),Unknown,2014,10.3390/met4040549,https://www.mdpi.com/2075-4701/4/4/549
+23543822,Metals (Basel),Unknown,2013,10.3390/met3010023,https://www.mdpi.com/2075-4701/3/1/23
+36284610,J Mar Sci Eng,Unknown,2022,10.3390/jmse10020244,https://www.mdpi.com/2077-1312/10/2/244
+37828952,J Mar Sci Eng,Unknown,2022,10.3390/jmse10040526,https://www.mdpi.com/2077-1312/10/4/526
+38891126,Cells,Unknown,2024,10.3390/cells13110895,https://www.mdpi.com/2073-4409/13/11/895
+38891106,Cells,Unknown,2024,10.3390/cells13110975,https://www.mdpi.com/2073-4409/13/11/975
+38793127,J Pers Med,Unknown,2024,10.3390/jpm14050545,https://www.mdpi.com/2075-4426/14/5/545
+38793034,J Pers Med,Unknown,2024,10.3390/jpm14050452,https://www.mdpi.com/2075-4426/14/5/452
+38893066,J Clin Med,Unknown,2024,10.3390/jcm13113354,https://www.mdpi.com/2077-0383/13/11/3354
+38892976,J Clin Med,Unknown,2024,10.3390/jcm13113267,https://www.mdpi.com/2077-0383/13/11/3267
+37920277,Languages (Basel),Unknown,2022,10.3390/languages7040278,https://www.mdpi.com/2226-471X/7/4/278
+35371966,Languages (Basel),Unknown,2021,10.3390/languages6040168,https://www.mdpi.com/2226-471X/6/4/168
+33205042,Psych,Unknown,2019,10.3390/psych1010038,https://www.mdpi.com/2624-8611/1/1/38
+32832712,Infrastructures (Basel),Unknown,2017,10.3390/infrastructures2030011,https://www.mdpi.com/2412-3811/2/3/11
+38784721,Mathematics (Basel),Unknown,2024,10.3390/math12091271,https://www.mdpi.com/2227-7390/12/9/1271
+34540628,Mathematics (Basel),Unknown,2021,10.3390/math9172063,https://www.mdpi.com/2227-7390/9/17/2063
+37885763,Vibration,Unknown,2023,10.3390/vibration6010016,https://www.mdpi.com/2571-631X/6/1/16
+36299552,Vibration,Unknown,2022,10.3390/vibration5040041,https://www.mdpi.com/2571-631X/5/4/41
+34307955,Urban Sci,Unknown,2021,10.3390/urbansci5020046,https://www.mdpi.com/2413-8851/5/2/46
+37538930,Reprod Med (Basel),Unknown,2022,10.3390/reprodmed3040021,https://www.mdpi.com/2673-3897/3/4/21
+32832919,Reprod Med (Basel),Unknown,2020,10.3390/reprodmed1020008,https://www.mdpi.com/2673-3897/1/2/8
+38827579,Stats (Basel),Unknown,2024,10.3390/stats7020028,https://www.mdpi.com/2571-905X/7/2/28
+35574500,Stats (Basel),Unknown,2022,10.3390/stats5020021,https://www.mdpi.com/2571-905X/5/2/21
+32855816,Coatings (Basel),Unknown,2020,10.3390/coatings10060560,https://www.mdpi.com/2079-6412/10/6/560
+32905411,Environments (Basel),Unknown,2020,10.3390/environments7060044,https://www.mdpi.com/2076-3298/7/6/44
+38786624,Mar Drugs,Unknown,2024,10.3390/md22050233,https://www.mdpi.com/1660-3397/22/5/233
+38667774,Mar Drugs,Unknown,2024,10.3390/md22040157,https://www.mdpi.com/1660-3397/22/4/157
+38791866,Int J Environ Res Public Health,Unknown,2024,10.3390/ijerph21050573,https://www.mdpi.com/1660-4601/21/5/573
+38791784,Int J Environ Res Public Health,Unknown,2024,10.3390/ijerph21050569,https://www.mdpi.com/1660-4601/21/5/569
+38785501,Curr Oncol,Unknown,2024,10.3390/curroncol31050220,https://www.mdpi.com/1718-7729/31/5/220
+38785500,Curr Oncol,Unknown,2024,10.3390/curroncol31050219,https://www.mdpi.com/1718-7729/31/5/219
+37483532,Processes (Basel),Unknown,2021,10.3390/pr9122192,https://www.mdpi.com/2227-9717/9/12/2192
+38313692,Water (Basel),Unknown,2023,10.3390/w15223956,https://www.mdpi.com/2073-4441/15/22/3956
+31275622,Water (Basel),Unknown,2019,10.3390/w11061131,https://www.mdpi.com/2073-4441/11/6/1131
+38804360,Dermatopathology (Basel),Unknown,2024,10.3390/dermatopathology11020015,https://www.mdpi.com/2296-3529/11/2/15
+35076482,Dermatopathology (Basel),Unknown,2021,10.3390/dermatopathology9010001,https://www.mdpi.com/2296-3529/9/1/1
+38893733,Diagnostics (Basel),Unknown,2024,10.3390/diagnostics14111107,https://www.mdpi.com/2075-4418/14/11/1107
+38893714,Diagnostics (Basel),Unknown,2024,10.3390/diagnostics14111188,https://www.mdpi.com/2075-4418/14/11/1188
+36936196,Forests,Unknown,2022,10.3390/f13040536,https://www.mdpi.com/1999-4907/13/4/536
+33123319,Forests,Unknown,2020,10.3390/f11050539,https://www.mdpi.com/1999-4907/11/5/539
+38804359,Int J Neonatal Screen,Unknown,2024,10.3390/ijns10020037,https://www.mdpi.com/2409-515X/10/2/37
+36810318,Int J Neonatal Screen,Unknown,2023,10.3390/ijns9010006,https://www.mdpi.com/2409-515X/9/1/6
+38529328,Laws,Unknown,2024,10.3390/laws13010005,https://www.mdpi.com/2075-471X/13/1/5
+38891232,Healthcare (Basel),Unknown,2024,10.3390/healthcare12111157,https://www.mdpi.com/2227-9032/12/11/1157
+38891206,Healthcare (Basel),Unknown,2024,10.3390/healthcare12111130,https://www.mdpi.com/2227-9032/12/11/1130
+37180428,Minerals (Basel),Unknown,2022,10.3390/min12101314,https://www.mdpi.com/2075-163X/12/10/1314
+38786648,J Funct Biomater,Unknown,2024,10.3390/jfb15050121,https://www.mdpi.com/2079-4983/15/5/121
+38667538,J Funct Biomater,Unknown,2024,10.3390/jfb15040081,https://www.mdpi.com/2079-4983/15/4/81
+38786928,Insects,Unknown,2024,10.3390/insects15050372,https://www.mdpi.com/2075-4450/15/5/372
+38786911,Insects,Unknown,2024,10.3390/insects15050355,https://www.mdpi.com/2075-4450/15/5/355
+38785855,Behav Sci (Basel),Unknown,2024,10.3390/bs14050364,https://www.mdpi.com/2076-328X/14/5/364
+38392681,Membranes (Basel),Unknown,2024,10.3390/membranes14020054,https://www.mdpi.com/2077-0375/14/2/54
+38786767,Metabolites,Unknown,2024,10.3390/metabo14050290,https://www.mdpi.com/2218-1989/14/5/290
+38668356,Metabolites,Unknown,2024,10.3390/metabo14040228,https://www.mdpi.com/2218-1989/14/4/228
+38650964,Symmetry (Basel),Unknown,2023,10.3390/sym15081490,https://www.mdpi.com/2073-8994/15/8/1490
+22685629,Symmetry (Basel),Unknown,2011,10.3390/sym3030574,https://www.mdpi.com/2073-8994/3/3/574
+38529123,Algorithms,Unknown,2023,10.3390/a16100471,https://www.mdpi.com/1999-4893/16/10/471
+30906511,Algorithms,Unknown,2018,10.3390/a11050067,https://www.mdpi.com/1999-4893/11/5/67
+36999161,Diversity (Basel),Unknown,2022,10.3390/d15010043,https://www.mdpi.com/1424-2818/15/1/43
+35911605,Diversity (Basel),Unknown,2022,10.3390/d14050313,https://www.mdpi.com/1424-2818/14/5/313
+38892728,Nutrients,Unknown,2024,10.3390/nu16111778,https://www.mdpi.com/2072-6643/16/11/1778
+38892673,Nutrients,Unknown,2024,10.3390/nu16111740,https://www.mdpi.com/2072-6643/16/11/1740
+35795594,Proceedings (MDPI),Unknown,2018,10.3390/ecsa-5-05742,https://www.mdpi.com/2504-3900/4/1/8
+36815944,Acoustics (Basel),Unknown,2023,10.3390/acoustics5010005,https://www.mdpi.com/2624-599X/5/1/5
+31123720,Inventions (Basel),Unknown,2019,10.3390/inventions4010013,https://www.mdpi.com/2411-5134/4/1/13
+36313595,Horticulturae,Unknown,2021,10.3390/horticulturae7090270,https://www.mdpi.com/2311-7524/7/9/270
+37693124,Agriculture (Basel),Unknown,2023,10.3390/agriculture13030595,https://www.mdpi.com/2077-0472/13/3/595
+37593169,Climate (Basel),Unknown,2023,10.3390/cli11050108,https://www.mdpi.com/2225-1154/11/5/108
+35295881,Fire (Basel),Unknown,2022,10.3390/fire5010027,https://www.mdpi.com/2571-6255/5/1/27
+33111035,Fire (Basel),Unknown,2020,10.3390/fire3030041,https://www.mdpi.com/2571-6255/3/3/41
+33015572,J (Basel),Unknown,2020,10.3390/j3030024,https://www.mdpi.com/2571-8800/3/3/24
+31844842,J (Basel),Unknown,2018,10.3390/j1010005,https://www.mdpi.com/2571-8800/1/1/5
+38785595,Eur J Investig Health Psychol Educ,Unknown,2024,10.3390/ejihpe14050097,https://www.mdpi.com/2254-9625/14/5/97
+38534892,Eur J Investig Health Psychol Educ,Unknown,2024,10.3390/ejihpe14030031,https://www.mdpi.com/2254-9625/14/3/31
+38872954,Gastrointest Disord (Basel),Unknown,2024,10.3390/gidisord6020025,https://www.mdpi.com/2624-5647/6/2/25
+35531260,Gastrointest Disord (Basel),Unknown,2021,10.3390/gidisord3030011,https://www.mdpi.com/2624-5647/3/3/11
+31709033,Future Internet,Unknown,2018,10.3390/fi10070057,https://www.mdpi.com/1999-5903/10/7/57
+37476506,Magnetochemistry,Unknown,2023,10.3390/magnetochemistry9070166,https://www.mdpi.com/2312-7481/9/7/166
+36776538,Magnetochemistry,Unknown,2023,10.3390/magnetochemistry9010033,https://www.mdpi.com/2312-7481/9/1/33
+38804356,Vision (Basel),Unknown,2024,10.3390/vision8020035,https://www.mdpi.com/2411-5150/8/2/35
+37218957,Vision (Basel),Unknown,2023,10.3390/vision7020039,https://www.mdpi.com/2411-5150/7/2/39
+35978717,Inorganics (Basel),Unknown,2021,10.3390/inorganics9110083,https://www.mdpi.com/2304-6740/9/11/83
+38046130,Inorganics (Basel),Unknown,2019,10.3390/inorganics7070090,https://www.mdpi.com/2304-6740/7/7/90
+31355129,Aerospace (Basel),Unknown,2018,10.3390/aerospace5020041,https://www.mdpi.com/2226-4310/5/2/41
+30547007,Aerospace (Basel),Unknown,2018,10.3390/aerospace5020052,https://www.mdpi.com/2226-4310/5/2/52
+37485036,Neuroglia,Unknown,2023,10.3390/neuroglia4030011,https://www.mdpi.com/2571-6980/4/3/11
+36909794,Neuroglia,Unknown,2022,10.3390/neuroglia3020005,https://www.mdpi.com/2571-6980/3/2/5
+38804369,Epigenomes,Unknown,2024,10.3390/epigenomes8020020,https://www.mdpi.com/2075-4655/8/2/20
+35225957,Epigenomes,Unknown,2022,10.3390/epigenomes6010004,https://www.mdpi.com/2075-4655/6/1/4
+38804278,Clocks Sleep,Unknown,2024,10.3390/clockssleep6020017,https://www.mdpi.com/2624-5175/6/2/17
+38534802,Clocks Sleep,Unknown,2024,10.3390/clockssleep6010014,https://www.mdpi.com/2624-5175/6/1/14
+35118346,Soil Syst,Unknown,2021,10.3390/soilsystems5010018,https://www.mdpi.com/2571-8789/5/1/18
+30714024,Soil Syst,Unknown,2018,10.3390/soilsystems2020022,https://www.mdpi.com/2571-8789/2/2/22
+37693369,Energies (Basel),Unknown,2023,10.3390/en16155736,https://www.mdpi.com/1996-1073/16/15/5736
+30881604,Energies (Basel),Unknown,2018,10.3390/en11071797,https://www.mdpi.com/1996-1073/11/7/1797
+37366488,NeuroSci,Unknown,2022,10.3390/neurosci3040045,https://www.mdpi.com/2673-4087/3/4/45
+34485751,Sexes,Unknown,2021,10.3390/sexes2010003,https://www.mdpi.com/2411-5118/2/1/3
+33163684,Sexes,Unknown,2020,10.3390/sexes1010002,https://www.mdpi.com/2411-5118/1/1/2
+38895505,Endocrines,Unknown,2024,10.3390/endocrines5010008,https://www.mdpi.com/2673-396X/5/1/8
+33870263,Endocrines,Unknown,2021,10.3390/endocrines2020007,https://www.mdpi.com/2673-396X/2/2/7
+38792971,Medicina,Unknown,2024,10.3390/medicina60050789,https://www.mdpi.com/1648-9144/60/5/789
+38893588,Molecules,Unknown,2024,10.3390/molecules29112648,https://www.mdpi.com/1420-3049/29/11/2648
+38893558,Molecules,Unknown,2024,10.3390/molecules29112683,https://www.mdpi.com/1420-3049/29/11/2683
+38785569,Curr Issues Mol Biol,Unknown,2024,10.3390/cimb46050301,https://www.mdpi.com/1467-3045/46/5/301
+38785507,Curr Issues Mol Biol,Unknown,2024,10.3390/cimb46050239,https://www.mdpi.com/1467-3045/46/5/239
+38786516,Biomimetics,Unknown,2024,10.3390/biomimetics9050306,https://www.mdpi.com/2313-7673/9/5/306
+38667257,Biomimetics,Unknown,2024,10.3390/biomimetics9040247,https://www.mdpi.com/2313-7673/9/4/247
+38894491,Sensors (Basel),Unknown,2024,10.3390/s24113672,https://www.mdpi.com/1424-8220/24/11/3672
+38894414,Sensors (Basel),Unknown,2024,10.3390/s24113626,https://www.mdpi.com/1424-8220/24/11/3626
+38804439,Adv Respir Med,Unknown,2024,10.3390/arm92030021,https://www.mdpi.com/2543-6031/92/3/21
+37218799,Adv Respir Med,Unknown,2023,10.3390/arm91030016,https://www.mdpi.com/2543-6031/91/3/16
+38786578,J Imaging,Unknown,2024,10.3390/jimaging10050124,https://www.mdpi.com/2313-433X/10/5/124
+38392094,J Imaging,Unknown,2024,10.3390/jimaging10020046,https://www.mdpi.com/2313-433X/10/2/46
+28920095,Condens Matter,Unknown,2016,10.3390/condmat1010001,https://www.mdpi.com/2410-3896/1/1/1
+37908282,Data (Basel),Unknown,2022,10.3390/data7110148,https://www.mdpi.com/2306-5729/7/11/148
+30498741,Data (Basel),Unknown,2017,10.3390/data2040038,https://www.mdpi.com/2306-5729/2/4/38
+35910342,Computation (Basel),Unknown,2022,10.3390/computation10020019,https://www.mdpi.com/2079-3197/10/2/19
+32661494,Computation (Basel),Unknown,2020,10.3390/computation8020053,https://www.mdpi.com/2079-3197/8/2/53
+38804291,J Xenobiot,Unknown,2024,10.3390/jox14020038,https://www.mdpi.com/2039-4713/14/2/38
+36412767,J Xenobiot,Unknown,2022,10.3390/jox12040023,https://www.mdpi.com/2039-4713/12/4/23
+38665395,Information (Basel),Unknown,2024,10.3390/info15010007,https://www.mdpi.com/2078-2489/15/1/7
+37009525,Information (Basel),Unknown,2022,10.3390/info13110547,https://www.mdpi.com/2078-2489/13/11/547
+38804322,Geriatrics (Basel),Unknown,2024,10.3390/geriatrics9030065,https://www.mdpi.com/2308-3417/9/3/65
+37887970,Geriatrics (Basel),Unknown,2023,10.3390/geriatrics8050097,https://www.mdpi.com/2308-3417/8/5/97
+34765674,Safety (Basel),Unknown,2021,10.3390/safety7010018,https://www.mdpi.com/2313-576X/7/1/18
+29387711,Safety (Basel),Unknown,2017,10.3390/safety3010010,https://www.mdpi.com/2313-576X/3/1/10
+38787052,Trop Med Infect Dis,Unknown,2024,10.3390/tropicalmed9050119,https://www.mdpi.com/2414-6366/9/5/119
+38668535,Trop Med Infect Dis,Unknown,2024,10.3390/tropicalmed9040074,https://www.mdpi.com/2414-6366/9/4/74
+37551336,Atoms,Unknown,2022,10.3390/atoms10020042,https://www.mdpi.com/2218-2004/10/2/42
+27274981,Atoms,Unknown,2014,10.3390/atoms2020086,https://www.mdpi.com/2218-2004/2/2/86
+27453793,Cosmetics,Unknown,2016,10.3390/cosmetics3010006,https://www.mdpi.com/2079-9284/3/1/6
+38791095,Biomedicines,Unknown,2024,10.3390/biomedicines12051133,https://www.mdpi.com/2227-9059/12/5/1133
+38791057,Biomedicines,Unknown,2024,10.3390/biomedicines12051095,https://www.mdpi.com/2227-9059/12/5/1095
+37251084,Separations,Unknown,2023,10.3390/separations10040237,https://www.mdpi.com/2297-8739/10/4/237
+28344977,Separations,Unknown,2016,10.3390/separations3030027,https://www.mdpi.com/2297-8739/3/3/27
+34277367,Technologies (Basel),Unknown,2020,10.3390/technologies8020033,https://www.mdpi.com/2227-7080/8/2/33
+27695688,Technologies (Basel),Unknown,2016,10.3390/technologies4030021,https://www.mdpi.com/2227-7080/4/3/21
+37990660,Catalysts,Unknown,2023,10.3390/catal13091258,https://www.mdpi.com/2073-4344/13/9/1258
+38756353,Sustainability,Unknown,2024,10.3390/su16030963,https://www.mdpi.com/2071-1050/16/3/963
+33552560,Sustainability,Unknown,2019,10.3390/su11102891,https://www.mdpi.com/2071-1050/11/10/2891
+38786266,Gels,Unknown,2024,10.3390/gels10050349,https://www.mdpi.com/2310-2861/10/5/349
+38667679,Gels,Unknown,2024,10.3390/gels10040260,https://www.mdpi.com/2310-2861/10/4/260
+38818527,Educ Sci (Basel),Unknown,2024,10.3390/educsci14040339,https://www.mdpi.com/2227-7102/14/4/339
+38116307,Educ Sci (Basel),Unknown,2023,10.3390/educsci13010023,https://www.mdpi.com/2227-7102/13/1/23
+37873544,Gastroenterol Insights,Unknown,2023,10.3390/gastroent14040031,https://www.mdpi.com/2036-7422/14/4/31
+32655922,Lubricants,Unknown,2020,10.3390/lubricants8050053,https://www.mdpi.com/2075-4442/8/5/53
+38804457,J Funct Morphol Kinesiol,Unknown,2024,10.3390/jfmk9020091,https://www.mdpi.com/2411-5142/9/2/91
+38132718,J Funct Morphol Kinesiol,Unknown,2023,10.3390/jfmk8040163,https://www.mdpi.com/2411-5142/8/4/163
+32751130,High Throughput,Unknown,2020,10.3390/ht9030017,https://www.mdpi.com/2571-5135/9/3/17
+30669303,High Throughput,Unknown,2019,10.3390/ht8010004,https://www.mdpi.com/2571-5135/8/1/4
+38786545,Dent J (Basel),Unknown,2024,10.3390/dj12050147,https://www.mdpi.com/2304-6767/12/5/147
+38668025,Dent J (Basel),Unknown,2024,10.3390/dj12040113,https://www.mdpi.com/2304-6767/12/4/113
+38667226,Biomimetics (Basel),Unknown,2024,10.3390/biomimetics9040215,https://www.mdpi.com/2313-7673/9/4/215
+38525780,Methods Protoc,Unknown,2024,10.3390/mps7020022,https://www.mdpi.com/2409-9279/7/2/22
+38152159,Fishes,Unknown,2023,10.3390/fishes8110538,https://www.mdpi.com/2410-3888/8/11/538
+29683143,Fishes,Unknown,2018,10.3390/fishes3010005,https://www.mdpi.com/2410-3888/3/1/5
+36686269,Games (Basel),Unknown,2022,10.3390/g13060076,https://www.mdpi.com/2073-4336/13/6/76
+38787008,Sports (Basel),Unknown,2024,10.3390/sports12050139,https://www.mdpi.com/2075-4663/12/5/139
+38787002,Sports (Basel),Unknown,2024,10.3390/sports12050133,https://www.mdpi.com/2075-4663/12/5/133
+38894051,Materials (Basel),Unknown,2024,10.3390/ma17112781,https://www.mdpi.com/1996-1944/17/11/2781
+38894009,Materials (Basel),Unknown,2024,10.3390/ma17112743,https://www.mdpi.com/1996-1944/17/11/2743
+38790277,Genes (Basel),Unknown,2024,10.3390/genes15050648,https://www.mdpi.com/2073-4425/15/5/648
+38790182,Genes (Basel),Unknown,2024,10.3390/genes15050553,https://www.mdpi.com/2073-4425/15/5/553
+38804283,Hematol Rep,Unknown,2024,10.3390/hematolrep16020030,https://www.mdpi.com/2038-8330/16/2/30
+38132279,Hematol Rep,Unknown,2023,10.3390/hematolrep15040071,https://www.mdpi.com/2038-8330/15/4/71
+38804408,Clin Pract,Unknown,2024,10.3390/clinpract14030076,https://www.mdpi.com/2039-7283/14/3/76
+38131690,Clin Pract,Unknown,2023,10.3390/clinpract13060141,https://www.mdpi.com/2039-7283/13/6/141
+37727770,Atmosphere (Basel),Unknown,2022,10.3390/atmos13122096,https://www.mdpi.com/2073-4433/13/12/2096
+36187445,Atmosphere (Basel),Unknown,2022,10.3390/atmos13020304,https://www.mdpi.com/2073-4433/13/2/304
