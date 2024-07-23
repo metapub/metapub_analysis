@@ -1,8 +1,8 @@
 import streamlit as st
-from fetch_helpers import get_publishers, get_journal_list, calculate_publication_years
-from process_helpers import process_pmids, display_statistics
-from database import init_db, fetch_results
 from metapub import PubMedFetcher
+from fetch_helpers import get_publishers, get_journal_list, calculate_publication_years
+from process_helpers import process_pmids, display_statistics, display_results
+from database import init_db, fetch_results
 
 # Set the directory where publisher files are stored
 publisher_dir = "FINDIT_EXPERIMENT/publishers"
@@ -64,20 +64,7 @@ if selected_publisher:
                     results = fetch_results(selected_journal, selected_year)
                     if results:
                         st.header(f"Results for {selected_journal} in {selected_year}")
-                        for row in results:
-                            pmid, url, reason, downloadable = row
-                            if url:
-                                if "europepmc" in url:
-                                    st.markdown(f"PMID {pmid}: [URL]({url}) [Free] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
-                                else:
-                                    if downloadable == 200:
-                                        st.markdown(f"PMID {pmid}: [URL]({url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
-                                    elif downloadable == 402:
-                                        st.markdown(f"PMID {pmid}: [URL]({url}) [Publisher] <span style='color: red;'>[402]</span>", unsafe_allow_html=True)
-                                    else:
-                                        st.markdown(f"PMID {pmid}: [URL]({url}) [Publisher] <span style='color: red;'>[{downloadable}]</span>", unsafe_allow_html=True)
-                            else:
-                                st.write(f"PMID {pmid}: No URL found, reason: {reason}")
+                        display_results(results)
 
 # Optionally clear the session state if needed
 if st.button("Clear Session State"):

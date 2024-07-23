@@ -12,6 +12,7 @@ def process_pmids(pmids, selected_journal, selected_year, result_display, progre
     cached_count = 0
 
     for i, pmid in enumerate(pmids):
+        pubmed_url = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
         cached_result = fetch_result_for_pmid(pmid)
         if cached_result:
             cached_count += 1
@@ -20,55 +21,55 @@ def process_pmids(pmids, selected_journal, selected_year, result_display, progre
                 if "europepmc" in url:
                     free_count += 1
                     downloadable_count += 1
-                    result_display.markdown(f"PMID {pmid}: [URL]({url}) [Free] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+                    result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Free] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
                 else:
                     publisher_count += 1
                     if downloadable == 200:
                         downloadable_count += 1
-                        result_display.markdown(f"PMID {pmid}: [URL]({url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+                        result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
                     elif downloadable == 402:
                         non_downloadable_count += 1
-                        result_display.markdown(f"PMID {pmid}: [URL]({url}) [Publisher] <span style='color: red;'>[402]</span>", unsafe_allow_html=True)
+                        result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Publisher] <span style='color: red;'>[402]</span>", unsafe_allow_html=True)
                     else:
                         non_downloadable_count += 1
-                        result_display.markdown(f"PMID {pmid}: [URL]({url}) [Publisher] <span style='color: red;'>[{downloadable}]</span>", unsafe_allow_html=True)
+                        result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Publisher] <span style='color: red;'>[{downloadable}]</span>", unsafe_allow_html=True)
             else:
-                result_display.write(f"PMID {pmid}: No URL ({reason}).")
+                result_display.write(f"[PMID {pmid}]({pubmed_url}): No URL ({reason}).")
         else:
             src = FindIt(pmid, verify=False)
             if src.url:
                 if "europepmc" in src.url:
                     free_count += 1
                     downloadable_count += 1
-                    result_display.markdown(f"PMID {pmid}: [URL]({src.url}) [Free] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+                    result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({src.url}) [Free] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
                     save_result(pmid, selected_journal, selected_year, src.url, None, 200)
                 else:
                     publisher_count += 1
-                    result_display.markdown(f"PMID {pmid}: [URL]({src.url}) [Publisher]", unsafe_allow_html=True)
+                    result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({src.url}) [Publisher]", unsafe_allow_html=True)
                     response_code = check_downloadable(src.url)
                     if response_code == 200:
                         downloadable_count += 1
-                        result_display.markdown(f"PMID {pmid}: [URL]({src.url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+                        result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({src.url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
                     else:
                         non_downloadable_count += 1
-                        result_display.markdown(f"PMID {pmid}: [URL]({src.url}) [Publisher] <span style='color: red;'>[{response_code}]</span>", unsafe_allow_html=True)
+                        result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({src.url}) [Publisher] <span style='color: red;'>[{response_code}]</span>", unsafe_allow_html=True)
                     save_result(pmid, selected_journal, selected_year, src.url, None, response_code)
             else:
                 reason = src.reason
-                if "DENIED" in reason and src.doi:
+                if reason.startswith("DENIED") and src.doi:
                     doi_url = f"https://dx.doi.org/{src.doi}"
                     response_code = check_downloadable(doi_url)
                     if response_code == 200:
-                        result_display.markdown(f"PMID {pmid}: [URL]({doi_url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+                        result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({doi_url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
                         save_result(pmid, selected_journal, selected_year, doi_url, None, 200)
                     else:
-                        result_display.markdown(f"PMID {pmid}: [URL]({doi_url}) [Publisher] <span style='color: red;'>[{response_code}]</span>", unsafe_allow_html=True)
+                        result_display.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({doi_url}) [Publisher] <span style='color: red;'>[{response_code}]</span>", unsafe_allow_html=True)
                         save_result(pmid, selected_journal, selected_year, doi_url, reason, response_code)
                 else:
                     if not src.doi:
                         reason = "No DOI found."
                     save_result(pmid, selected_journal, selected_year, None, reason, 402)
-                    result_display.write(f"PMID {pmid}: No URL ({reason}).")
+                    result_display.write(f"[PMID {pmid}]({pubmed_url}): No URL ({reason}).")
 
         # Update progress bar
         progress_bar.progress((i + 1) / len(pmids))
@@ -84,4 +85,21 @@ def display_statistics(pmids, cached_count, free_count, publisher_count, downloa
     st.write(f"Publisher articles: {publisher_count}")
     st.write(f"Downloadable articles: {downloadable_count}")
     st.write(f"Non-downloadable articles: {non_downloadable_count}")
+
+def display_results(results):
+    for row in results:
+        pmid, url, reason, downloadable = row
+        pubmed_url = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+        if url:
+            if "europepmc" in url:
+                st.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Free] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+            else:
+                if downloadable == 200:
+                    st.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Publisher] <span style='color: green;'>[200]</span>", unsafe_allow_html=True)
+                elif downloadable == 402:
+                    st.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Publisher] <span style='color: red;'>[402]</span>", unsafe_allow_html=True)
+                else:
+                    st.markdown(f"[PMID {pmid}]({pubmed_url}): [URL]({url}) [Publisher] <span style='color: red;'>[{downloadable}]</span>", unsafe_allow_html=True)
+        else:
+            st.write(f"[PMID {pmid}]({pubmed_url}): No URL found, reason: {reason}")
 
